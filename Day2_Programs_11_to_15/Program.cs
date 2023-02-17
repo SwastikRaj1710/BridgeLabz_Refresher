@@ -20,7 +20,9 @@ namespace Day2_Programs_11_to_15 // Note: actual namespace depends on the projec
                 Console.WriteLine("9. Find the first repeated element in an array");
                 Console.WriteLine("10. Check the syntax of a given arithmetic expression and evaluate it");
                 Console.WriteLine("11. Find the length of the longest substring with no repeating characters in a given string");
-                Console.WriteLine("12. Exit");
+                Console.WriteLine("12. Delete an element at the desired position");
+                Console.WriteLine("13. Find the second largest element in a given array");
+                Console.WriteLine("14. Exit");
                 Console.WriteLine("Enter your choice");
                 int ch = Convert.ToInt32(Console.ReadLine());
 
@@ -73,10 +75,10 @@ namespace Day2_Programs_11_to_15 // Note: actual namespace depends on the projec
                         break;
                     case 7:
                         Console.WriteLine("Enter size of array");
-                        int len = Convert.ToInt32(Console.ReadLine());
-                        int[] arr1 = new int[len];
+                        int len1 = Convert.ToInt32(Console.ReadLine());
+                        int[] arr1 = new int[len1];
                         Console.WriteLine("Enter the array elements");
-                        for (int i = 0; i < len; i++)
+                        for (int i = 0; i < len1; i++)
                         {
                             arr1[i] = Convert.ToInt32(Console.ReadLine());
                         }
@@ -85,10 +87,10 @@ namespace Day2_Programs_11_to_15 // Note: actual namespace depends on the projec
                         break;
                     case 8:
                         Console.WriteLine("Enter size of array");
-                        int length = Convert.ToInt32(Console.ReadLine());
-                        int[] arr2 = new int[length];
+                        int len2 = Convert.ToInt32(Console.ReadLine());
+                        int[] arr2 = new int[len2];
                         Console.WriteLine("Enter the array elements");
-                        for (int i = 0; i < length; i++)
+                        for (int i = 0; i < len2; i++)
                         {
                             arr2[i] = Convert.ToInt32(Console.ReadLine());
                         }
@@ -97,10 +99,10 @@ namespace Day2_Programs_11_to_15 // Note: actual namespace depends on the projec
                         break;
                     case 9:
                         Console.WriteLine("Enter size of array");
-                        int len1 = Convert.ToInt32(Console.ReadLine());
-                        int[] arr3 = new int[len1];
+                        int len3 = Convert.ToInt32(Console.ReadLine());
+                        int[] arr3 = new int[len3];
                         Console.WriteLine("Enter the array elements");
-                        for (int i = 0; i < len1; i++)
+                        for (int i = 0; i < len3; i++)
                         {
                             arr3[i] = Convert.ToInt32(Console.ReadLine());
                         }
@@ -133,10 +135,10 @@ namespace Day2_Programs_11_to_15 // Note: actual namespace depends on the projec
                         break;
                     case 12:
                         Console.WriteLine("Enter size of array");
-                        int len2 = Convert.ToInt32(Console.ReadLine());
-                        int[] arr4 = new int[len2];
+                        int len4 = Convert.ToInt32(Console.ReadLine());
+                        int[] arr4 = new int[len4];
                         Console.WriteLine("Enter the array elements");
-                        for (int i = 0; i < len2; i++)
+                        for (int i = 0; i < len4; i++)
                         {
                             arr4[i] = Convert.ToInt32(Console.ReadLine());
                         }
@@ -146,6 +148,22 @@ namespace Day2_Programs_11_to_15 // Note: actual namespace depends on the projec
                         obj12.Delete(arr4, x);
                         break;
                     case 13:
+                        Console.WriteLine("Enter size of array");
+                        int len5 = Convert.ToInt32(Console.ReadLine());
+                        int[] arr5 = new int[len5];
+                        Console.WriteLine("Enter the array elements");
+                        for (int i = 0; i < len5; i++)
+                        {
+                            arr5[i] = Convert.ToInt32(Console.ReadLine());
+                        }
+                        SecondLargest obj13 = new SecondLargest();
+                        int second = obj13.FindSecondLargest(arr5);
+                        if (second == -1)
+                            Console.WriteLine("Second Largest element not found");
+                        else
+                            Console.WriteLine("Second Largest Element: " + second);
+                        break;
+                    case 14:
                         Environment.Exit(0);
                         break;
                     default:

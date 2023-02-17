@@ -23,7 +23,8 @@ namespace Day2_Programs_11_to_15 // Note: actual namespace depends on the projec
                 Console.WriteLine("12. Delete an element at the desired position");
                 Console.WriteLine("13. Find the second largest element in a given array");
                 Console.WriteLine("14. Remove all duplicates elements from a given array");
-                Console.WriteLine("15. Exit");
+                Console.WriteLine("15. Find the smallest gap between numbers in a given array");
+                Console.WriteLine("16. Exit");
                 Console.WriteLine("Enter your choice");
                 int ch = Convert.ToInt32(Console.ReadLine());
 
@@ -177,6 +178,19 @@ namespace Day2_Programs_11_to_15 // Note: actual namespace depends on the projec
                         obj14.Duplicate(arr6);
                         break;
                     case 15:
+                        Console.WriteLine("Enter size of array");
+                        int len7 = Convert.ToInt32(Console.ReadLine());
+                        int[] arr7 = new int[len7];
+                        Console.WriteLine("Enter the array elements");
+                        for (int i = 0; i < len7; i++)
+                        {
+                            arr7[i] = Convert.ToInt32(Console.ReadLine());
+                        }
+                        SmallestGap obj15 = new SmallestGap();
+                        int minGap = obj15.minGap(arr7);
+                        Console.WriteLine("Smallest gap between the numbers in an array: " + minGap);
+                        break;
+                    case 16:
                         Environment.Exit(0);
                         break;
                     default:

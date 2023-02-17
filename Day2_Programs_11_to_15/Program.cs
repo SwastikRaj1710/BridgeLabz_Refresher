@@ -132,6 +132,20 @@ namespace Day2_Programs_11_to_15 // Note: actual namespace depends on the projec
                         Console.WriteLine("Length of the longest substring is: " + longest);
                         break;
                     case 12:
+                        Console.WriteLine("Enter size of array");
+                        int len2 = Convert.ToInt32(Console.ReadLine());
+                        int[] arr4 = new int[len2];
+                        Console.WriteLine("Enter the array elements");
+                        for (int i = 0; i < len2; i++)
+                        {
+                            arr4[i] = Convert.ToInt32(Console.ReadLine());
+                        }
+                        Console.WriteLine("Enter the desired position from which the element has to de deleted");
+                        int x = Convert.ToInt32(Console.ReadLine());
+                        ArrayDeletion obj12 = new ArrayDeletion();
+                        obj12.Delete(arr4, x);
+                        break;
+                    case 13:
                         Environment.Exit(0);
                         break;
                     default:

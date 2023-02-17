@@ -22,7 +22,8 @@ namespace Day2_Programs_11_to_15 // Note: actual namespace depends on the projec
                 Console.WriteLine("11. Find the length of the longest substring with no repeating characters in a given string");
                 Console.WriteLine("12. Delete an element at the desired position");
                 Console.WriteLine("13. Find the second largest element in a given array");
-                Console.WriteLine("14. Exit");
+                Console.WriteLine("14. Remove all duplicates elements from a given array");
+                Console.WriteLine("15. Exit");
                 Console.WriteLine("Enter your choice");
                 int ch = Convert.ToInt32(Console.ReadLine());
 
@@ -164,6 +165,18 @@ namespace Day2_Programs_11_to_15 // Note: actual namespace depends on the projec
                             Console.WriteLine("Second Largest Element: " + second);
                         break;
                     case 14:
+                        Console.WriteLine("Enter size of array");
+                        int len6 = Convert.ToInt32(Console.ReadLine());
+                        object[] arr6 = new object[len6];
+                        Console.WriteLine("Enter the array elements");
+                        for (int i = 0; i < len6; i++)
+                        {
+                            arr6[i] = Console.ReadLine();
+                        }
+                        RemoveDuplicates obj14 = new RemoveDuplicates();
+                        obj14.Duplicate(arr6);
+                        break;
+                    case 15:
                         Environment.Exit(0);
                         break;
                     default:

@@ -26,7 +26,8 @@ namespace RefresherPrograms // Note: actual namespace depends on the project nam
                 Console.WriteLine("15. Find the smallest gap between numbers in a given array");
                 Console.WriteLine("16. Find the percentage of heads and tails when flipping the coin, a given number of times");
                 Console.WriteLine("17. Find whether a given year is a Leap Year or not");
-                Console.WriteLine("18. Exit");
+                Console.WriteLine("18. Display a table pf powers of 2 that are less than or equal to the given number");
+                Console.WriteLine("19. Exit");
                 Console.WriteLine("Enter your choice");
                 int ch = Convert.ToInt32(Console.ReadLine());
 
@@ -209,6 +210,20 @@ namespace RefresherPrograms // Note: actual namespace depends on the project nam
                             Console.WriteLine("Year " + year + " is not a Leap Year");
                         break;
                     case 18:
+                        Console.WriteLine("Enter the value of N");
+                        int table = Convert.ToInt32(Console.ReadLine());
+                        if(table > 30)
+                        {
+                            Console.WriteLine("Integer Overflow Error, please enter a value in the range of 0-30");
+                        }
+                        else
+                        {
+                            Console.WriteLine("Powers of 2 till " + table);
+                            PowersOf2 obj18 = new PowersOf2();
+                            obj18.Power(table);
+                        }
+                        break;
+                    case 19:
                         Environment.Exit(0);
                         break;
                     default:

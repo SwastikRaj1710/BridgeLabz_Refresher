@@ -24,7 +24,9 @@ namespace RefresherPrograms // Note: actual namespace depends on the project nam
                 Console.WriteLine("13. Find the second largest element in a given array");
                 Console.WriteLine("14. Remove all duplicates elements from a given array");
                 Console.WriteLine("15. Find the smallest gap between numbers in a given array");
-                Console.WriteLine("16. Exit");
+                Console.WriteLine("16. Find the percentage of heads and tails when flipping the coin, a given number of times");
+                Console.WriteLine("17. Find whether a given year is a Leap Year or not");
+                Console.WriteLine("18. Exit");
                 Console.WriteLine("Enter your choice");
                 int ch = Convert.ToInt32(Console.ReadLine());
 
@@ -197,6 +199,16 @@ namespace RefresherPrograms // Note: actual namespace depends on the project nam
                         obj16.HeadTail(flips);
                         break;
                     case 17:
+                        Console.WriteLine("Enter the year");
+                        int year = Convert.ToInt32(Console.ReadLine());
+                        LeapYear obj17 = new LeapYear();
+                        bool isLeap = obj17.IsLeapYear(year);
+                        if (isLeap)
+                            Console.WriteLine("Year " + year + " is a Leap Year");
+                        else
+                            Console.WriteLine("Year " + year + " is not a Leap Year");
+                        break;
+                    case 18:
                         Environment.Exit(0);
                         break;
                     default:

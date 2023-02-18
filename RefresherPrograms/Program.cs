@@ -191,6 +191,12 @@ namespace RefresherPrograms // Note: actual namespace depends on the project nam
                         Console.WriteLine("Smallest gap between the numbers in an array: " + minGap);
                         break;
                     case 16:
+                        Console.WriteLine("Enter the number of times to flip coin");
+                        int flips = Convert.ToInt32(Console.ReadLine());
+                        CoinFlip obj16 = new CoinFlip();
+                        obj16.HeadTail(flips);
+                        break;
+                    case 17:
                         Environment.Exit(0);
                         break;
                     default:

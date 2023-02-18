@@ -32,7 +32,8 @@ namespace RefresherPrograms // Note: actual namespace depends on the project nam
                 Console.WriteLine("21. Find the Quotient and Remainder for the given Dividend and Divisor");
                 Console.WriteLine("22. Swap two given numbers");
                 Console.WriteLine("23. Find whether a given number is Even or Odd");
-                Console.WriteLine("24. Exit");
+                Console.WriteLine("24. Find whether the given alphabet is a Vowel or a Consonant");
+                Console.WriteLine("25. Exit");
                 Console.WriteLine("Enter your choice");
                 int ch = Convert.ToInt32(Console.ReadLine());
 
@@ -270,6 +271,12 @@ namespace RefresherPrograms // Note: actual namespace depends on the project nam
                         obj23.IsEvenOdd(numInput);
                         break;
                     case 24:
+                        Console.WriteLine("Enter an alphabet");
+                        char alphabet = Convert.ToChar(Console.ReadLine());
+                        VowelConsonant obj24 = new VowelConsonant();
+                        obj24.IsVowelConsonant(alphabet);
+                        break;
+                    case 25:
                         Environment.Exit(0);
                         break;
                     default:

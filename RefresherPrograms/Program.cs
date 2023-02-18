@@ -28,7 +28,9 @@ namespace RefresherPrograms // Note: actual namespace depends on the project nam
                 Console.WriteLine("17. Find whether a given year is a Leap Year or not");
                 Console.WriteLine("18. Display a table pf powers of 2 that are less than or equal to the given number");
                 Console.WriteLine("19. Find the Nth Harmonic Value for a given value N");
-                Console.WriteLine("20. Exit");
+                Console.WriteLine("20. Find the prime factors of a given number");
+                Console.WriteLine("21. Find the Quotient and Remainder for the given Dividend and Divisor");
+                Console.WriteLine("22. Exit");
                 Console.WriteLine("Enter your choice");
                 int ch = Convert.ToInt32(Console.ReadLine());
 
@@ -246,6 +248,13 @@ namespace RefresherPrograms // Note: actual namespace depends on the project nam
                         obj20.PrintPrimeFactors(number);
                         break;
                     case 21:
+                        Console.WriteLine("Enter the Dividend and Divisor");
+                        int dividend = Convert.ToInt32(Console.ReadLine());
+                        int divisor = Convert.ToInt32(Console.ReadLine());
+                        QuotientRemainder obj21 = new QuotientRemainder();
+                        obj21.FindQuotientRemainder(dividend, divisor);
+                        break;
+                    case 22:
                         Environment.Exit(0);
                         break;
                     default:

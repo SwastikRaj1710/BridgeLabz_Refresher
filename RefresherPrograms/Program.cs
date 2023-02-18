@@ -30,7 +30,9 @@ namespace RefresherPrograms // Note: actual namespace depends on the project nam
                 Console.WriteLine("19. Find the Nth Harmonic Value for a given value N");
                 Console.WriteLine("20. Find the prime factors of a given number");
                 Console.WriteLine("21. Find the Quotient and Remainder for the given Dividend and Divisor");
-                Console.WriteLine("22. Exit");
+                Console.WriteLine("22. Swap two given numbers");
+                Console.WriteLine("23. Find whether a given number is Even or Odd");
+                Console.WriteLine("24. Exit");
                 Console.WriteLine("Enter your choice");
                 int ch = Convert.ToInt32(Console.ReadLine());
 
@@ -262,6 +264,12 @@ namespace RefresherPrograms // Note: actual namespace depends on the project nam
                         obj22.SwapTwo(firstNum, secondNum);
                         break;
                     case 23:
+                        Console.WriteLine("Enter a number");
+                        int numInput = Convert.ToInt32(Console.ReadLine());
+                        EvenOdd obj23 = new EvenOdd();
+                        obj23.IsEvenOdd(numInput);
+                        break;
+                    case 24:
                         Environment.Exit(0);
                         break;
                     default:

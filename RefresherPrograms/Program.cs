@@ -33,7 +33,8 @@ namespace RefresherPrograms // Note: actual namespace depends on the project nam
                 Console.WriteLine("22. Swap two given numbers");
                 Console.WriteLine("23. Find whether a given number is Even or Odd");
                 Console.WriteLine("24. Find whether the given alphabet is a Vowel or a Consonant");
-                Console.WriteLine("25. Exit");
+                Console.WriteLine("25. Find the Largest among the three given numbers");
+                Console.WriteLine("26. Exit");
                 Console.WriteLine("Enter your choice");
                 int ch = Convert.ToInt32(Console.ReadLine());
 
@@ -277,6 +278,15 @@ namespace RefresherPrograms // Note: actual namespace depends on the project nam
                         obj24.IsVowelConsonant(alphabet);
                         break;
                     case 25:
+                        Console.WriteLine("Enter the three numbers");
+                        int number1 = Convert.ToInt32(Console.ReadLine());
+                        int number2 = Convert.ToInt32(Console.ReadLine());
+                        int number3 = Convert.ToInt32(Console.ReadLine());
+                        LargestAmong3 obj25 = new LargestAmong3();
+                        int largestNumber = obj25.Largest(number1,number2,number3);
+                        Console.WriteLine("The Largest number among the 3 numbers is: " + largestNumber);
+                        break;
+                    case 26:
                         Environment.Exit(0);
                         break;
                     default:

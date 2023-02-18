@@ -224,6 +224,13 @@ namespace RefresherPrograms // Note: actual namespace depends on the project nam
                         }
                         break;
                     case 19:
+                        Console.WriteLine("Enter the value of N");
+                        int nthTerm = Convert.ToInt32(Console.ReadLine());
+                        Harmonic obj19 = new Harmonic();
+                        float nthHarmonic = obj19.NthHarmonic(nthTerm);
+                        Console.WriteLine("Nth Harmonic Value: " + nthHarmonic);
+                        break;
+                    case 20:
                         Environment.Exit(0);
                         break;
                     default:

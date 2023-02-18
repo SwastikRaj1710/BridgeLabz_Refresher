@@ -255,6 +255,13 @@ namespace RefresherPrograms // Note: actual namespace depends on the project nam
                         obj21.FindQuotientRemainder(dividend, divisor);
                         break;
                     case 22:
+                        Console.WriteLine("Enter two numbers");
+                        int firstNum = Convert.ToInt32(Console.ReadLine());
+                        int secondNum = Convert.ToInt32(Console.ReadLine());
+                        Swap obj22 = new Swap();
+                        obj22.SwapTwo(firstNum, secondNum);
+                        break;
+                    case 23:
                         Environment.Exit(0);
                         break;
                     default:

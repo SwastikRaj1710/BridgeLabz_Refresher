@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace Day2_Programs_11_to_15 // Note: actual namespace depends on the project name.
+namespace RefresherPrograms // Note: actual namespace depends on the project name.
 {
     internal class Program
     {

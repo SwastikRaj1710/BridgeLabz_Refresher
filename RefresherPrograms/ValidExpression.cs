@@ -6,7 +6,7 @@ using System.Text;
 using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 
-namespace Day2_Programs_11_to_15
+namespace RefresherPrograms
 {
     internal class ValidExpression
     {

@@ -27,7 +27,8 @@ namespace RefresherPrograms // Note: actual namespace depends on the project nam
                 Console.WriteLine("16. Find the percentage of heads and tails when flipping the coin, a given number of times");
                 Console.WriteLine("17. Find whether a given year is a Leap Year or not");
                 Console.WriteLine("18. Display a table pf powers of 2 that are less than or equal to the given number");
-                Console.WriteLine("19. Exit");
+                Console.WriteLine("19. Find the Nth Harmonic Value for a given value N");
+                Console.WriteLine("20. Exit");
                 Console.WriteLine("Enter your choice");
                 int ch = Convert.ToInt32(Console.ReadLine());
 
@@ -226,11 +227,25 @@ namespace RefresherPrograms // Note: actual namespace depends on the project nam
                     case 19:
                         Console.WriteLine("Enter the value of N");
                         int nthTerm = Convert.ToInt32(Console.ReadLine());
-                        Harmonic obj19 = new Harmonic();
-                        float nthHarmonic = obj19.NthHarmonic(nthTerm);
-                        Console.WriteLine("Nth Harmonic Value: " + nthHarmonic);
+                        if(nthTerm == 0) 
+                        {
+                            Console.WriteLine("Please enter a value grater than 0");
+                        }
+                        else
+                        {
+                            Harmonic obj19 = new Harmonic();
+                            float nthHarmonic = obj19.NthHarmonic(nthTerm);
+                            Console.WriteLine("Nth Harmonic Value: " + nthHarmonic);
+                        }
                         break;
                     case 20:
+                        Console.WriteLine("Enter a number");
+                        int number = Convert.ToInt32(Console.ReadLine());
+                        PrimeFactors obj20 = new PrimeFactors();
+                        Console.WriteLine("Prime Factors are: ");
+                        obj20.PrintPrimeFactors(number);
+                        break;
+                    case 21:
                         Environment.Exit(0);
                         break;
                     default:

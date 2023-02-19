@@ -11,7 +11,7 @@ namespace RefresherPrograms
         public int Longest(string s)
         {
             HashSet<char> set = new HashSet<char>();
-            int maxLength = 0, start = -1, end = 0;
+            int maxLength = 0, start = 0, end = 0;
 
             for(end=0;end<s.Length;end++)
             {
@@ -27,7 +27,7 @@ namespace RefresherPrograms
                     start = end;
                 }
             }
-            return maxLength;
+            return maxLength+1;
         }
     }
 }

@@ -11,18 +11,12 @@ namespace RefresherPrograms
         public void Delete(int[] arr, int x)
         {
             x = x - 1;
-            int i;
             int size = arr.Length;
-            for(i=0;i<size; i++)
-            {
-                if (i == x)
-                    break;
-            }
 
-            if(i<size)
+            if(x<size)
             {
                 size--;
-                for(int j=i;j<size;j++)
+                for(int j=x;j<size;j++)
                 {
                     arr[j] = arr[j+1];
                 }

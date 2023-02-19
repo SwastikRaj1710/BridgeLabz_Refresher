@@ -156,8 +156,15 @@ namespace RefresherPrograms // Note: actual namespace depends on the project nam
                         }
                         Console.WriteLine("Enter the desired position from which the element has to de deleted");
                         int x = Convert.ToInt32(Console.ReadLine());
-                        ArrayDeletion obj12 = new ArrayDeletion();
-                        obj12.Delete(arr4, x);
+                        if(x>len4)
+                        {
+                            Console.WriteLine("Entered position out of array range");
+                        }
+                        else
+                        {
+                            ArrayDeletion obj12 = new ArrayDeletion();
+                            obj12.Delete(arr4, x);
+                        }
                         break;
                     case 13:
                         Console.WriteLine("Enter size of array");

@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections;
 
 namespace LogicalPrograms // Note: actual namespace depends on the project name.
 {
@@ -10,7 +11,8 @@ namespace LogicalPrograms // Note: actual namespace depends on the project name.
             {
                 Console.WriteLine("\nMenu:");
                 Console.WriteLine("1. A Gambler Simulation which displays the number of wins and win-loss percentage");
-                Console.WriteLine("2. Exit");
+                Console.WriteLine("2. ");
+                Console.WriteLine("3. Exit");
                 Console.WriteLine("Enter your choice");
                 int ch = Convert.ToInt32(Console.ReadLine());
 
@@ -27,6 +29,19 @@ namespace LogicalPrograms // Note: actual namespace depends on the project name.
                         obj1.Gamble(stake, goal, bets);
                         break;
                     case 2:
+                        Console.WriteLine("Enter the number of distinct numbers");
+                        int distinct = Convert.ToInt32(Console.ReadLine());
+                        List<int> l = new List<int>();
+                        Console.WriteLine("Enter the distinct numbers");
+                        for(int i=0;i<distinct;i++)
+                        {
+                            l.Add(Convert.ToInt32(Console.ReadLine()));
+                        }
+                        CouponNumbers obj2 = new CouponNumbers();
+                        int randomCount = obj2.CountRandom(l);
+                        Console.WriteLine("The number of random numbers generated to get all given unique numbers is: " + randomCount);
+                        break;
+                    case 3:
                         Environment.Exit(0);
                         break;
                 }

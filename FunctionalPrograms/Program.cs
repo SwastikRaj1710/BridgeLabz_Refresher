@@ -11,7 +11,8 @@ namespace FunctionalPrograms // Note: actual namespace depends on the project na
                 Console.WriteLine("\nMenu:");
                 Console.WriteLine("1. A library for reading in 2D arrays from standard input and printing them out to standard output");
                 Console.WriteLine("2. Count the number of triples that sum to exactly 0");
-                Console.WriteLine("3. Exit");
+                Console.WriteLine("3. Find the Euclidean distance from a given point (x, y) to the origin (0,0)");
+                Console.WriteLine("4. Exit");
                 Console.WriteLine("Enter your choice");
                 int ch = Convert.ToInt32(Console.ReadLine());
                 
@@ -50,10 +51,18 @@ namespace FunctionalPrograms // Note: actual namespace depends on the project na
                         }
                         else
                         {
-                            Console.WriteLine("Number of triplets found " + tripletsCount);
+                            Console.WriteLine("Number of triplets found: " + tripletsCount);
                         }
                         break;
                     case 3:
+                        Console.WriteLine("Enter the x and y coordinates");
+                        double x = Convert.ToDouble(Console.ReadLine());
+                        double y = Convert.ToDouble(Console.ReadLine());
+                        EuclideanDist obj3 = new EuclideanDist();
+                        double distance = obj3.CalculateEuclidean(x, y);
+                        Console.WriteLine("The Euclidean Distance between the given points and origin (0,0) is: " + distance);
+                        break;
+                    case 4:
                         Environment.Exit(0);
                         break;
                 }

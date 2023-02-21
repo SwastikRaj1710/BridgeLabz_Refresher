@@ -12,7 +12,8 @@ namespace FunctionalPrograms // Note: actual namespace depends on the project na
                 Console.WriteLine("1. A library for reading in 2D arrays from standard input and printing them out to standard output");
                 Console.WriteLine("2. Count the number of triples that sum to exactly 0");
                 Console.WriteLine("3. Find the Euclidean distance from a given point (x, y) to the origin (0,0)");
-                Console.WriteLine("4. Exit");
+                Console.WriteLine("4. Find the roots of a Quadratic equation");
+                Console.WriteLine("5. Exit");
                 Console.WriteLine("Enter your choice");
                 int ch = Convert.ToInt32(Console.ReadLine());
                 
@@ -63,6 +64,14 @@ namespace FunctionalPrograms // Note: actual namespace depends on the project na
                         Console.WriteLine("The Euclidean Distance between the given points and origin (0,0) is: " + distance);
                         break;
                     case 4:
+                        Console.WriteLine("Enter the values of a, b and c");
+                        double a = Convert.ToDouble(Console.ReadLine());
+                        double b = Convert.ToDouble(Console.ReadLine());
+                        double c = Convert.ToDouble(Console.ReadLine());
+                        Quadratic obj4 = new Quadratic();
+                        obj4.Roots(a, b, c);
+                        break;
+                    case 5:
                         Environment.Exit(0);
                         break;
                 }

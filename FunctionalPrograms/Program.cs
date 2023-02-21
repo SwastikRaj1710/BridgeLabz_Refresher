@@ -13,7 +13,8 @@ namespace FunctionalPrograms // Note: actual namespace depends on the project na
                 Console.WriteLine("2. Count the number of triples that sum to exactly 0");
                 Console.WriteLine("3. Find the Euclidean distance from a given point (x, y) to the origin (0,0)");
                 Console.WriteLine("4. Find the roots of a Quadratic equation");
-                Console.WriteLine("5. Exit");
+                Console.WriteLine("5. Find the Effective temperature(Wind Chill) using the given temperature and wind speed");
+                Console.WriteLine("6. Exit");
                 Console.WriteLine("Enter your choice");
                 int ch = Convert.ToInt32(Console.ReadLine());
                 
@@ -72,6 +73,15 @@ namespace FunctionalPrograms // Note: actual namespace depends on the project na
                         obj4.Roots(a, b, c);
                         break;
                     case 5:
+                        Console.WriteLine("Enter the temperature in Fahrenheit (less than 50)");
+                        double temp = Convert.ToDouble(Console.ReadLine());
+                        Console.WriteLine("Enter the wind speed in Miles per hour (from 3 to 120");
+                        double windspeed = Convert.ToDouble(Console.ReadLine());
+                        WindChill obj5 = new WindChill();
+                        double windchill = obj5.FindWindChill(temp, windspeed);
+                        Console.WriteLine("The WindChill for the given temperature and wind speed is: " + windchill);
+                        break;
+                    case 6:
                         Environment.Exit(0);
                         break;
                 }

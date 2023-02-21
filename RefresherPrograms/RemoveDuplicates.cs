@@ -10,7 +10,7 @@ namespace RefresherPrograms
     {
         public void Duplicate(object[] arr)
         {
-            int size = arr.Length;
+            /*int size = arr.Length;
             for(int i=0;i<size; i++)
             {
                 for(int j=i+1;j<size;j++)
@@ -25,13 +25,26 @@ namespace RefresherPrograms
                         j--;
                     }
                 }
+            }*/
+
+            HashSet<object> dup = new HashSet<object>();
+            foreach (object item in arr)
+            {
+                dup.Add(item);
             }
 
             Console.WriteLine("Array after removal of duplicates");
+
+            foreach (object item in dup)
+            {
+                Console.WriteLine(item);
+            }
+
+            /*
             for(int i=0;i<size;i++)
             {
                 Console.WriteLine(arr[i]);
-            }
+            }*/
         }
     }
 }

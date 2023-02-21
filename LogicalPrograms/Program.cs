@@ -11,8 +11,9 @@ namespace LogicalPrograms // Note: actual namespace depends on the project name.
             {
                 Console.WriteLine("\nMenu:");
                 Console.WriteLine("1. A Gambler Simulation which displays the number of wins and win-loss percentage");
-                Console.WriteLine("2. ");
-                Console.WriteLine("3. Exit");
+                Console.WriteLine("2. Find the number of random numbers to be generated in order to get the given distinct numbers");
+                Console.WriteLine("3. Create a stopwatch to calculate the time elapsed between the start and stop clicks");
+                Console.WriteLine("4. Exit");
                 Console.WriteLine("Enter your choice");
                 int ch = Convert.ToInt32(Console.ReadLine());
 
@@ -42,6 +43,15 @@ namespace LogicalPrograms // Note: actual namespace depends on the project name.
                         Console.WriteLine("The number of random numbers generated to get all given unique numbers is: " + randomCount);
                         break;
                     case 3:
+                        Timer obj3 = new Timer();
+                        Console.WriteLine("Enter S to start the stopwatch");
+                        char command = Convert.ToChar(Console.ReadLine());
+                        if(command=='S')
+                        {
+                            obj3.FindElapsedTime();
+                        }
+                        break;
+                    case 4:
                         Environment.Exit(0);
                         break;
                 }

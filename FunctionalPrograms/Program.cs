@@ -73,9 +73,9 @@ namespace FunctionalPrograms // Note: actual namespace depends on the project na
                         obj4.Roots(a, b, c);
                         break;
                     case 5:
-                        Console.WriteLine("Enter the temperature in Fahrenheit (less than 50)");
+                        Console.WriteLine("Enter the temperature in Fahrenheit (not more than 50)");
                         double temp = Convert.ToDouble(Console.ReadLine());
-                        Console.WriteLine("Enter the wind speed in Miles per hour (from 3 to 120");
+                        Console.WriteLine("Enter the wind speed in Miles per hour (from 3 to 120)");
                         double windspeed = Convert.ToDouble(Console.ReadLine());
                         WindChill obj5 = new WindChill();
                         double windchill = obj5.FindWindChill(temp, windspeed);

@@ -13,7 +13,8 @@ namespace LogicalPrograms // Note: actual namespace depends on the project name.
                 Console.WriteLine("1. A Gambler Simulation which displays the number of wins and win-loss percentage");
                 Console.WriteLine("2. Find the number of random numbers to be generated in order to get the given distinct numbers");
                 Console.WriteLine("3. Create a stopwatch to calculate the time elapsed between the start and stop clicks");
-                Console.WriteLine("4. Exit");
+                Console.WriteLine("4. TicTacToe game implementation");
+                Console.WriteLine("5. Exit");
                 Console.WriteLine("Enter your choice");
                 int ch = Convert.ToInt32(Console.ReadLine());
 
@@ -52,6 +53,10 @@ namespace LogicalPrograms // Note: actual namespace depends on the project name.
                         }
                         break;
                     case 4:
+                        TicTacToe obj4 = new TicTacToe();
+                        obj4.Game();
+                        break;
+                    case 5:
                         Environment.Exit(0);
                         break;
                 }

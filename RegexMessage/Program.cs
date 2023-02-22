@@ -35,7 +35,7 @@ namespace RegexMessage // Note: actual namespace depends on the project name.
             {
                 result = Regex.Replace(result, date, String.Format("{0:dd/MM/yyyy}", DateTime.Now));
             }
-            Console.WriteLine("Modified message:");
+            Console.WriteLine("Modified message: ");
             Console.WriteLine(result);
         }
     }

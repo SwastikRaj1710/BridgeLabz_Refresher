@@ -6,7 +6,7 @@ namespace FileHandling // Note: actual namespace depends on the project name.
     {
         static void Main(string[] args)
         {
-            while(true)
+            while (true)
             {
                 Console.WriteLine("\nMenu:");
                 Console.WriteLine("1. Perform read write operations on a TXT file");
@@ -23,6 +23,8 @@ namespace FileHandling // Note: actual namespace depends on the project name.
                         obj1.ReadWriteOps();
                         break;
                     case 2:
+                        CSV obj2 = new CSV();
+                        obj2.ReadWriteOps();
                         break;
                     case 3:
                         break;

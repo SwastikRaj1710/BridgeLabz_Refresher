@@ -27,6 +27,8 @@ namespace FileHandling // Note: actual namespace depends on the project name.
                         obj2.ReadWriteOps();
                         break;
                     case 3:
+                        JSON obj3 = new JSON();
+                        obj3.ReadWriteOps();
                         break;
                     case 4:
                         Environment.Exit(0);

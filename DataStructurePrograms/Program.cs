@@ -11,7 +11,8 @@ namespace DataStructurePrograms // Note: actual namespace depends on the project
                 Console.WriteLine("\nMenu:");
                 Console.WriteLine("1. Read data from a file, perform insertion or deletion and write the data back to another file");
                 Console.WriteLine("2. Check for Balanced Parenthesis");
-                Console.WriteLine("3. Exit");
+                Console.WriteLine("3. Banking Cash Counter Simulation");
+                Console.WriteLine("4. Exit");
                 
                 Console.WriteLine("Enter your choice");
                 int ch = Convert.ToInt32(Console.ReadLine());
@@ -40,6 +41,12 @@ namespace DataStructurePrograms // Note: actual namespace depends on the project
                             Console.WriteLine("The given expression has Balanced Parenthesis");
                         else
                             Console.WriteLine("The given expression does not have Balanced Parenthesis");
+                        break;
+                    case 3:
+                        BankingCashCounter obj3 = new BankingCashCounter();
+                        obj3.PerformBankOperations();
+                        break;
+                    case 4:
                         Environment.Exit(0);
                         break;
                     default:

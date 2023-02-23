@@ -10,14 +10,16 @@ namespace RegexMessage // Note: actual namespace depends on the project name.
             Console.WriteLine("Enter the input string");
             string inputString = Console.ReadLine();
 
-            string name = @"<<[a-z]+>>";
-            string fullname = @"<<([a-z]+)\s([a-z]*)>>";
-            string phone = @"91-x{10}";
-            string date = @"X{2}/X{2}/X{4}";
+            string name = @"^[A-Za-z]+$";
+            string fullname = @"^([A-Za-z]+)\s([A-Za-z]+)(\s[A-Za-z]+)*$";
+            string phone = @"^91-[0-9]{10}$";
+            string date = @"^([0][1-9]|[1-2][0-9]|(3)[0-1])(\/)(((0)[1-9])|((1)[0-2]))(\/)\d{4}$";
+            string email = @"^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$";
             Regex nameregex = new Regex(name);
             Regex fullnameregex = new Regex(fullname);
             Regex phoneregex = new Regex(phone);
             Regex dateregex = new Regex(date);
+            Regex emailregex = new Regex(email);
             string result = "";
             if(nameregex.IsMatch(inputString))
             {
@@ -34,6 +36,10 @@ namespace RegexMessage // Note: actual namespace depends on the project name.
             if (dateregex.IsMatch(result))
             {
                 result = Regex.Replace(result, date, String.Format("{0:dd/MM/yyyy}", DateTime.Now));
+            }
+            if (emailregex.IsMatch(result))
+            {
+                result = Regex.Replace(result, email, "swastik1710@gmail.com");
             }
             Console.WriteLine("Modified message: ");
             Console.WriteLine(result);

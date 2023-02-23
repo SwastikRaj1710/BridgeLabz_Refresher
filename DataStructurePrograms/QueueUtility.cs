@@ -54,6 +54,7 @@ namespace DataStructurePrograms
             if (isEmpty())
             {
                 Console.WriteLine("Queue is Empty");
+                return;
             }
             Node ptr = front;
             front = ptr.next;
@@ -70,26 +71,27 @@ namespace DataStructurePrograms
             if (isEmpty())
             {
                 Console.WriteLine("Queue is Empty");
+                return -999;
             }
             return front.data;
         }
 
         public void display()
         {
-            int ptr1 = 0;
-            Console.Write("Available Balance = ");
+            int sumTotal = 0;
+            Console.Write("Available Balance: ");
             if (size == 0)
             {
-                Console.WriteLine("Empty");
+                Console.WriteLine("Queue is empty");
                 return;
             }
-            Node ptr = front;
-            while (ptr != rear.next)
+            Node temp = front;
+            while (temp != rear.next)
             {
-                ptr1 = ptr1 + ptr.data;
-                ptr = ptr.next;
+                sumTotal+= temp.data;
+                temp = temp.next;
             }
-            Console.WriteLine(ptr1);
+            Console.WriteLine(sumTotal);
             Console.WriteLine();
         }
     }

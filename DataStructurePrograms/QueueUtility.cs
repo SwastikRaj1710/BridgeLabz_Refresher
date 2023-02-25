@@ -54,7 +54,7 @@ namespace DataStructurePrograms
             if (isEmpty())
             {
                 Console.WriteLine("Queue is Empty");
-                return;
+                return -999;
             }
             Node ptr = front;
             front = ptr.next;

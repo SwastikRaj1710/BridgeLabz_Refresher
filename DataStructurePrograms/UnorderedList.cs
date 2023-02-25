@@ -16,7 +16,7 @@ namespace DataStructurePrograms
             string sentence = ReadfromFile(filename);
 
             //Convert to List
-            LinkedList<string> list = StringtoList(sentence);
+            LinkedListUtility list = StringtoList(sentence);
 
             //Modify List 
             Console.WriteLine("Enter the word to be searched");
@@ -43,20 +43,9 @@ namespace DataStructurePrograms
             return sentence;
         }
 
-        public void WritetoFile(LinkedList<string> list)
+        public LinkedListUtility StringtoList(string sentence)
         {
-            StreamWriter sw = new StreamWriter("D:\\BridgeLabz\\BridgeLabz_Refresher\\DataStructurePrograms\\File2.txt");
-            for (LinkedListNode<string> node = list.First; node != null; node = node.Next)
-            {
-                sw.Write(node.Value + " ");
-                Console.Write(node.Value + " ");
-            }
-            sw.Close();
-        }
-
-        public LinkedList<string> StringtoList(string sentence)
-        {
-            LinkedList<string> list = new LinkedList<string>();
+            LinkedListUtility list = new LinkedListUtility();
             sentence = sentence + " ";
             string word = "";
             for (int i = 0; i < sentence.Length; i++)
@@ -67,13 +56,13 @@ namespace DataStructurePrograms
                 }
                 else
                 {
-                    if (list.Count == 0)
+                    if (list.NodeCount() == 0)
                     {
-                        list.AddFirst(word);
+                        list.InsertFirst(word);
                     }
                     else
                     {
-                        list.AddLast(word);
+                        list.InsertLast(word);
                     }
                     word = "";
                 }
@@ -81,17 +70,28 @@ namespace DataStructurePrograms
             return list;
         }
 
-        public LinkedList<string> ModifyList(LinkedList<string> list, string searchWord)
+        public LinkedListUtility ModifyList(LinkedListUtility list, string searchWord)
         {
-            if (list.Contains(searchWord))
+            if (list.ContainsNode(searchWord))
             {
-                list.Remove(searchWord);
+                list.DeleteNodebyKey(searchWord);
             }
             else
             {
-                list.AddLast(searchWord);
+                list.InsertLast(searchWord);
             }
             return list;
+        }
+
+        public void WritetoFile(LinkedListUtility list)
+        {
+            StreamWriter sw = new StreamWriter("D:\\BridgeLabz\\BridgeLabz_Refresher\\DataStructurePrograms\\File2.txt");
+            for (Node1 node = list.GetFirstNode(); node != null; node = node.next)
+            {
+                sw.Write(node.data + " ");
+                Console.Write(node.data + " ");
+            }
+            sw.Close();
         }
     }
 }

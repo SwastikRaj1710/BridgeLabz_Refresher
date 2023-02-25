@@ -1,0 +1,32 @@
+{
+  "Rice": [
+    {
+      "Name": "Basmati",
+      "Weight": 5,
+      "Price_Per_Kg": 70,
+      "Total Price": 0
+    },
+    {
+      "Name": "Valencia",
+      "Weight": 10,
+      "Price_Per_Kg": 50,
+      "Total Price": 0
+    }
+  ],
+  "Pulses": [
+    {
+      "Name": "Kidney Beans",
+      "Weight": 2,
+      "Price_Per_Kg": 100,
+      "Total Price": 0
+    }
+  ],
+  "Wheats": [
+    {
+      "Name": "Semolina",
+      "Weight": 7,
+      "Price_Per_Kg": 50,
+      "Total Price": 0
+    }
+  ]
+}

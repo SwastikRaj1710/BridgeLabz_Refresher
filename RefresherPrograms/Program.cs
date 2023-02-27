@@ -1,13 +1,19 @@
-﻿using System;
+﻿using NLog;
+using System;
 
 namespace RefresherPrograms // Note: actual namespace depends on the project name.
 {
     internal class Program
     {
+        private static Logger logger = LogManager.GetCurrentClassLogger();
+
         static void Main(string[] args)
         {
-            while(true)
+            Console.WriteLine();
+            logger.Info("Starting the application");
+            while (true)
             {
+                logger.Info("\nDisplayng the menu");
                 Console.WriteLine("\nMenu:");
                 Console.WriteLine("1. Find the Factorial of a number");
                 Console.WriteLine("2. Print 1 to 100 without using loop");
@@ -36,8 +42,12 @@ namespace RefresherPrograms // Note: actual namespace depends on the project nam
                 Console.WriteLine("25. Find the Largest among the three given numbers");
                 Console.WriteLine("26. Exit");
                 Console.WriteLine("Enter your choice");
+                Console.WriteLine(); 
+                logger.Info("Taking user input");
                 int ch = Convert.ToInt32(Console.ReadLine());
 
+                Console.WriteLine();
+                logger.Info("Executing the requested prgram");
                 switch (ch)
                 {
                     case 1:
@@ -295,8 +305,12 @@ namespace RefresherPrograms // Note: actual namespace depends on the project nam
                         break;
                     case 26:
                         Environment.Exit(0);
+                        Console.WriteLine(); 
+                        logger.Info("Exiting the application");
                         break;
                     default:
+                        Console.WriteLine(); 
+                        logger.Error("Entered wrong menu option");
                         Console.WriteLine("Invalid Choice!!!");
                         break;
                 }

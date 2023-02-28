@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Configuration;
 using System.Data;
 using System.Data.SqlClient;
 
@@ -8,7 +9,7 @@ namespace EmployeeDBProgram // Note: actual namespace depends on the project nam
     {
         static void Main(string[] args)
         {
-            string connectionString = "data source=SWASTIK-ENG;initial catalog=EmployeeDB;integrated security=true";
+            var connectionString = ConfigurationManager.ConnectionStrings["connection_string"].ConnectionString;
             SqlConnection conn = new SqlConnection(connectionString);
             while (true)
             {

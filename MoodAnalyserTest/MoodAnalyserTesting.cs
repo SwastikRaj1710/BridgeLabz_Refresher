@@ -3,11 +3,11 @@ using MoodAnalyser;
 namespace MoodAnalyserTest
 {
     [TestClass]
-    public class UnitTest1
+    public class MoodAnalyserTesting
     {
 
         [TestMethod]
-        public void TestHappyMood()
+        public void GivenHappyString_returnHappyMood()
         {
             Analyze obj = new Analyze();
             string mood = obj.AnalyseMood("I am very happy today");
@@ -15,7 +15,7 @@ namespace MoodAnalyserTest
         }
 
         [TestMethod]
-        public void TestSadMood()
+        public void GivenSadString_returnSadMood()
         {
             Analyze obj = new Analyze();
             string mood = obj.AnalyseMood("I am sad");
@@ -23,7 +23,7 @@ namespace MoodAnalyserTest
         }
 
         [TestMethod]
-        public void TestNullMood()
+        public void GivenNullString_returnHappyMood()
         {
             Analyze obj = new Analyze();
             string mood = obj.AnalyseMood("");
@@ -31,7 +31,7 @@ namespace MoodAnalyserTest
         }
 
         [TestMethod]
-        public void TestEmptyMood()
+        public void GivenEmptyString_returnEmptyMood()
         {
             Analyze obj = new Analyze();
             string mood = obj.AnalyseMood("I am doing good today");

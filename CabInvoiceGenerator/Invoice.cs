@@ -8,10 +8,13 @@ namespace CabInvoiceGenerator
 {
     public class Invoice
     {
-        public int TotalFare(int km, int minute)
+        public int TotalFare(List<Ride> ride)
         {
             int totalFare = 5;
-            totalFare += 10*km + minute;
+            for(int i=0;i<ride.Count;i++)
+            {
+                totalFare += 10 * ride[i].km + ride[i].minute;
+            }
             return totalFare;
         }
     }

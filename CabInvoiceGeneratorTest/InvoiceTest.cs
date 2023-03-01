@@ -9,8 +9,10 @@ namespace CabInvoiceGeneratorTest
         public void GivenKmMinute_returnTotalFare()
         {
             Invoice obj = new Invoice();
-            int result = obj.TotalFare(5, 30);
-            Assert.AreEqual(result, 85);
+            Ride r1 = new Ride(5, 30);
+            Ride r2 = new Ride(10, 50);
+            int result = obj.TotalFare(new List<Ride>() { r1,r2 });
+            Assert.AreEqual(result, 235);
         }
     }
 }

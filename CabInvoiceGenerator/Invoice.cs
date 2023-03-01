@@ -10,10 +10,19 @@ namespace CabInvoiceGenerator
     {
         public int TotalFare(List<Ride> ride)
         {
-            int totalFare = 5;
+            int totalFare = 0;
             for(int i=0;i<ride.Count;i++)
             {
-                totalFare += 10 * ride[i].km + ride[i].minute;
+                if (ride[i].type=="normal")
+                {
+                    totalFare += 10 * ride[i].km + ride[i].minute;
+                    totalFare += 5;
+                }
+                else
+                {
+                    totalFare += 15 * ride[i].km + 2 * ride[i].minute;
+                    totalFare += 20;
+                }
             }
             return totalFare;
         }

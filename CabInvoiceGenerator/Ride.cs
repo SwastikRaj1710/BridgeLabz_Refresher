@@ -10,11 +10,13 @@ namespace CabInvoiceGenerator
     {
         public int km;
         public int minute;
+        public string type;
 
-        public Ride(int km,int minute) 
+        public Ride(int km,int minute,string type) 
         {
             this.km = km;
             this.minute = minute;
+            this.type = type;
         }
     }
 }

@@ -17,5 +17,16 @@ namespace CabInvoiceGenerator
             }
             return totalFare;
         }
+
+        public int TotalNoOfRides(List<Ride> ride)
+        {
+            return ride.Count;
+        }
+
+        public double AverageFarePerRide(List<Ride> ride)
+        {
+            double averagePerRide = (double)TotalFare(ride) / TotalNoOfRides(ride);
+            return averagePerRide;
+        }
     }
 }

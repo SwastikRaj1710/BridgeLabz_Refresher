@@ -6,7 +6,7 @@ namespace CabInvoiceGeneratorTest
     public class TotalFareTest
     {
         [TestMethod]
-        public void GivenKmMinute_returnTotalFare()
+        public void GivenKmMinuteType_returnTotalFare()
         {
             Ride r1 = new Ride(5, 30, "normal");
             Ride r2 = new Ride(10, 52, "normal");
@@ -21,7 +21,7 @@ namespace CabInvoiceGeneratorTest
         }
 
         [TestMethod]
-        public void GivenKmMinute_returnTotalNoOfRides()
+        public void GivenKmMinuteType_returnTotalNoOfRides()
         {
             Ride r1 = new Ride(5, 30, "normal");
             Ride r2 = new Ride(10, 52, "normal");
@@ -36,7 +36,7 @@ namespace CabInvoiceGeneratorTest
         }
 
         [TestMethod]
-        public void GivenKmMinute_returnAverageFarePerRide()
+        public void GivenKmMinuteType_returnAverageFarePerRide()
         {
             Ride r1 = new Ride(5, 30, "normal");
             Ride r2 = new Ride(10, 52, "normal");

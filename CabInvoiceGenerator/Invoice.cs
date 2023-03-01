@@ -28,5 +28,12 @@ namespace CabInvoiceGenerator
             double averagePerRide = (double)TotalFare(ride) / TotalNoOfRides(ride);
             return averagePerRide;
         }
+
+        public List<Ride> GetAllRides(int id, Dictionary<int,List<Ride>> dict)
+        {
+            return dict.GetValueOrDefault(id);
+        }
+
+
     }
 }

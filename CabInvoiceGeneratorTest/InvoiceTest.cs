@@ -8,31 +8,46 @@ namespace CabInvoiceGeneratorTest
         [TestMethod]
         public void GivenKmMinute_returnTotalFare()
         {
-            Invoice obj = new Invoice();
             Ride r1 = new Ride(5, 30);
             Ride r2 = new Ride(10, 50);
-            int result = obj.TotalFare(new List<Ride>() { r1,r2 });
-            Assert.AreEqual(result, 235);
+            Ride r3 = new Ride(20, 100);
+            List<Ride> rides = new List<Ride>() { r1, r2, r3 };
+            Dictionary<int,List<Ride>> dict = new Dictionary<int,List<Ride>>();
+            dict.Add(1,rides);
+            Invoice obj = new Invoice();
+            List<Ride> ride = obj.GetAllRides(1, dict);
+            int result = obj.TotalFare(ride);
+            Assert.AreEqual(result, 535);
         }
 
         [TestMethod]
         public void GivenKmMinute_returnTotalNoOfRides()
         {
-            Invoice obj = new Invoice();
             Ride r1 = new Ride(5, 30);
             Ride r2 = new Ride(10, 50);
-            int result = obj.TotalNoOfRides(new List<Ride>() { r1, r2 });
-            Assert.AreEqual(result, 2);
+            Ride r3 = new Ride(20, 100);
+            List<Ride> rides = new List<Ride>() { r1, r2, r3 };
+            Dictionary<int, List<Ride>> dict = new Dictionary<int, List<Ride>>();
+            dict.Add(1, rides);
+            Invoice obj = new Invoice();
+            List<Ride> ride = obj.GetAllRides(1, dict);
+            int result = obj.TotalNoOfRides(ride);
+            Assert.AreEqual(result, 3);
         }
 
         [TestMethod]
         public void GivenKmMinute_returnAverageFarePerRide()
         {
-            Invoice obj = new Invoice();
             Ride r1 = new Ride(5, 30);
-            Ride r2 = new Ride(10, 50);
-            double result = obj.AverageFarePerRide(new List<Ride>() { r1, r2 }) ;
-            Assert.AreEqual(result, 117.5);
+            Ride r2 = new Ride(10, 55);
+            Ride r3 = new Ride(20, 100);
+            List<Ride> rides = new List<Ride>() { r1, r2, r3 };
+            Dictionary<int, List<Ride>> dict = new Dictionary<int, List<Ride>>();
+            dict.Add(1, rides);
+            Invoice obj = new Invoice();
+            List<Ride> ride = obj.GetAllRides(1, dict);
+            double result = obj.AverageFarePerRide(ride);
+            Assert.AreEqual(result, 180);
         }
     }
 }
